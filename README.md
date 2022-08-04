@@ -1,6 +1,6 @@
 # vue-simple-smooth-scroll
 
-> 平滑滾動
+> 簡易平滑滾動
 
 ## Build Setup
 
