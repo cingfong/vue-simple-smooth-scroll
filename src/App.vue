@@ -52,6 +52,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 1px #2c3e50;
+  border-bottom: solid 1px #2c3e50;
 }
 </style>
