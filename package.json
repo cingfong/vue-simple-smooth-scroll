@@ -1,8 +1,8 @@
 {
   "name": "vue-simple-smooth-scroll",
-  "description": "簡易平滑滾動",
+  "description": "smooth-scroll",
   "keywords": "smooth scroll",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "author": "cingfong <cingfong311@gmail.com>",
   "license": "MIT",
   "private": false,
