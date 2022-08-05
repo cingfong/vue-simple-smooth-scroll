@@ -5,7 +5,7 @@
 ## Installation
 NPM
 ```bash
-npm install vue-simple-smooth-scroll  #  yarn add vue3-smooth-scrollbar
+npm install vue-simple-smooth-scroll
 ```
 ## Usage
 ### custom main scrollbar
@@ -18,7 +18,7 @@ npm install vue-simple-smooth-scroll  #  yarn add vue3-smooth-scrollbar
 </template>
 
 <script>
-import smoothScroll from "./lib/smooth-scroll.vue";
+import smoothScroll from "vue-simple-smooth-scroll";
 
 export default {
   components: { smoothScroll }
