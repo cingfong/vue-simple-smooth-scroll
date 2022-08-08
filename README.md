@@ -9,22 +9,22 @@ npm install vue-simple-smooth-scroll
 ```
 ## Usage
 ### custom main scrollbar
+**main.js**
+```javascript
+import smoothScroll from "vue-simple-smooth-scroll";
+Vue.use(smoothScroll)
+```
+
 **App.vue**
 ```vue
 <template>
-  <smoothScroll>
+  <smooth-scroll>
     <!-- content -->
-  </smoothScroll>
+  </smooth-scroll>
 </template>
-
-<script>
-import smoothScroll from "vue-simple-smooth-scroll";
-
-export default {
-  components: { smoothScroll }
-};
-</script>
 ```
+
+
 ## Build Setup
 ``` bash
 # install dependencies
