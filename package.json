@@ -1,8 +1,11 @@
 {
   "name": "vue-simple-smooth-scroll",
   "description": "smooth-scroll",
-  "keywords": "smooth scroll",
-  "version": "0.0.3",
+  "keywords": [
+    "smooth",
+    "scroll"
+  ],
+  "version": "0.1.0",
   "author": "cingfong <cingfong311@gmail.com>",
   "license": "MIT",
   "private": false,
@@ -13,10 +16,9 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "package": "vue-cli-service build --target lib ./src/lib/toast.js --name pig-ui --dest pig-ui",
     "prepublishOnly": "npm run build"
   },
-  "main": "dist/build.js",
+  "main": "dist/smooth-scroll.js",
   "dependencies": {
     "vue": "^2.5.11"
   },

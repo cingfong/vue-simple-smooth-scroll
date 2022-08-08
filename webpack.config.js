@@ -1,12 +1,19 @@
 var path = require('path')
 var webpack = require('webpack')
 
+//執行環境
+const NODE_ENV = process.env.NODE_ENV
+
 module.exports = {
-  entry: './src/main.js',
+  // entry: './src/main.js',
+  entry: NODE_ENV === 'development' ? './src/main.js' : './src/lib/smooth-scroll.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'smooth-scroll.js',
+    library: 'smoothScroll',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [
@@ -16,7 +23,7 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ],
-      },      {
+      }, {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {

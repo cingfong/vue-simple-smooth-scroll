@@ -16,14 +16,10 @@
 </template>
 
 <script>
-import smoothScroll from "./lib/smooth-scroll.vue";
 export default {
   name: "app",
   data() {
     return {};
-  },
-  components: {
-    smoothScroll
   }
 };
 </script>
