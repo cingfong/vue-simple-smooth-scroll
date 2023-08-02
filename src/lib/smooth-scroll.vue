@@ -84,7 +84,7 @@ export default {
 <style scoped>
 .smooth-wrap-scroll {
   pointer-events: auto;
-  position: fixed;
+  position: sticky;
   top: 0px;
   left: 0px;
   height: 100vh;
@@ -102,7 +102,7 @@ export default {
   top: 0px;
   left: 0px;
   pointer-events: none;
-  position: fixed;
+  position: sticky;
   z-index: -1;
   overflow: hidden !important;
 }

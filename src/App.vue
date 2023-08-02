@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <smoothScroll>
-      <div class="textWrap">
-        <h1>1</h1>
-        <h1>2</h1>
-        <h1>3</h1>
-        <h1>4</h1>
-        <h1>5</h1>
-        <h1>6</h1>
-        <h1>7</h1>
-        <h1>8</h1>
-      </div>
-    </smoothScroll>
+    <div class="smooth-scroll-wrap">
+      <smoothScroll>
+        <div class="textWrap">
+          <h1>smooth</h1>
+          <h1>1</h1>
+          <h1>2</h1>
+          <h1>3</h1>
+          <h1>4</h1>
+          <h1>5</h1>
+          <h1>6</h1>
+          <h1>7</h1>
+        </div>
+      </smoothScroll>
+    </div>
+    <div class="common textWrap">
+      <h1>default</h1>
+      <h1>1</h1>
+      <h1>2</h1>
+      <h1>3</h1>
+      <h1>4</h1>
+      <h1>5</h1>
+      <h1>6</h1>
+      <h1>7</h1>
+    </div>
   </div>
 </template>
 
@@ -35,6 +47,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: #2c3e50;
+  display: flex;
+}
+.smooth-scroll-wrap {
+  width: 50%;
+}
+.common {
+  width: 50%;
+  right: 0px;
+  position: relative;
 }
 .textWrap {
   display: flex;
