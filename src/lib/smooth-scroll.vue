@@ -14,7 +14,8 @@ export default {
   name: "smoothScroll",
   data() {
     return {
-      scrollGoCtl: null
+      scrollCtl: null,
+      goCtl: null
     };
   },
   mounted() {
@@ -27,7 +28,7 @@ export default {
       );
       vm.$refs.smoothWrapScroll.addEventListener(
         "scroll",
-        this.throttled(vm.smoothScrollFn, 50)
+        this.throttled(vm.smoothScrollFn, 25)
       );
       vm.$refs.smoothContentScroll.addEventListener("DOMNodeInserted", () => {
         vm.$refs.smoothScroll.style.height = `${vm.$refs.smoothContentScroll.offsetHeight}px`;
@@ -51,8 +52,8 @@ export default {
     },
     smoothScrollFn() {
       const vm = this;
-      if (vm.scrollGoCtl) clearTimeout(vm.scrollGoCtl);
-      vm.scrollGoCtl = setTimeout(vm.scrollGo, 20);
+      if (vm.scrollCtl) clearTimeout(vm.scrollCtl);
+      vm.scrollCtl = setTimeout(vm.scrollGo, 20);
     },
     scrollGo() {
       const vm = this;
@@ -74,8 +75,8 @@ export default {
       } else if (smoothWrapScrollTop < smoothContentScrollTop) {
         vm.$refs.smoothContentWrap.scrollTop = smoothContentScrollTop - 15;
       }
-      if (vm.scrollGoCtl) clearTimeout(vm.scrollGoCtl);
-      vm.scrollGoCtl = setTimeout(vm.scrollGo, 5);
+      if (vm.goCtl) clearTimeout(vm.goCtl);
+      vm.goCtl = setTimeout(vm.scrollGo, 5);
     }
   }
 };
